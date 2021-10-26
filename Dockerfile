@@ -7,11 +7,12 @@ RUN apk add --no-cache zip libzip-dev \
     && docker-php-ext-configure zip --with-libzip \
     && docker-php-ext-install zip \
     && rm -rf /var/lib/apt/lists/* \
-    && composer global require symplify/easy-coding-standard phpunit/phpunit phpmd/phpmd \
+    && composer global require symplify/easy-coding-standard phpunit/phpunit pdepend/pdepend:2.10.0 phpmd/phpmd \
     && composer clear-cache \
     && rm -rf /var/cache/* /var/tmp/* /tmp/* /var/lib/apt/lists/*  /usr/share/man /var/lib/dpkg/info \
     && ln -s /root/.composer/vendor/bin/ecs /usr/bin \ 
-    && ln -s /root/.composer/vendor/bin/phpunit /usr/phpunit \ 
+    && ln -s /root/.composer/vendor/bin/phpunit /usr/bin \ 
+    && ln -s /root/.composer/vendor/bin/pdepend  /usr/bin \ 
     && ln -s /root/.composer/vendor/bin/phpmd /usr/bin
 
 WORKDIR /app
