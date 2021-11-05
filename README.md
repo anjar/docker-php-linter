@@ -9,9 +9,8 @@ Currently there are 2 library that can be use:
 ---
 #### How to use
 
-* Create ecs.php, if you wanna use ECS, see ecs.php.example, or read [ECS Documentation](https://github.com/symplify/easy-coding-standard).
-* Create ruleset.xmlif you want use PHPMD
-
+* Create ecs.php, if you wanna use ECS, see ecs.php.example.
+* Create ruleset.xml, if you want use PHPMD.
 * Ecs example:
   ```bash
     cd /path/to/app
