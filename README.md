@@ -9,6 +9,12 @@ Currently there are 2 library that can be use:
 ---
 #### How to use
 
+* Authenticate with github container.
+ ```bash
+  export CR_PAT=YOUR_TOKEN_WITH_READ_ACCESS_TO_PACKAGES
+  echo $CR_PAT | docker login ghcr.io -u USERNAME --password-stdin
+ ```
+ 
 * Create ecs.php, if you wanna use ECS, see ecs.php.example.
 * Create ruleset.xml, if you want use PHPMD.
 * Ecs example:
