@@ -2,6 +2,7 @@ FROM php:7.3-cli-alpine
 
 COPY --from=composer /usr/bin/composer /usr/bin/composer
 COPY --from=alpine/git /usr/bin/git /usr/bin/git
+ENV COMPOSER_MEMORY_LIMIT=-1
 
 RUN apk add --no-cache zip libzip-dev \
     && docker-php-ext-configure zip --with-libzip \
