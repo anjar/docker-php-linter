@@ -20,11 +20,11 @@ Currently there are 2 library that can be use:
 * Ecs example:
   ```bash
     cd /path/to/app
-    docker run --rm -v $(pwd):/app befrajna/php-code-checker ecs check /app/ 
+    docker run --rm -v $(pwd):/app ghcr.io/anjar/docker-php-linter ecs check /app/ 
   ```
 
 * PHPMD example:
   ```bash
     cd /path/to/app
-    docker run --rm -v $(pwd):/app befrajna/php-code-checker phpmd /app/ ansi ruleset.xml --exclude vendor/,node_modules/
+    docker run --rm -v $(pwd):/app ghcr.io/anjar/docker-php-linter phpmd /app/ ansi ruleset.xml --exclude vendor/,node_modules/
   ```
